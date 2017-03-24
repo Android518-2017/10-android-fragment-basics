@@ -16,17 +16,23 @@ public class MainActivity extends AppCompatActivity  implements PizzaMenuFragmen
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-
+    PizzaMenuFragment firstFragment;
+    FragmentTransaction ft =
+              getSupportFragmentManager().beginTransaction();// begin  FragmentTransaction
+    firstFragment = new PizzaMenuFragment();
 
     Log.d("DEBUG", getResources().getConfiguration().orientation + "");
 
     if (savedInstanceState == null) {
       // Instance of first fragment
-      PizzaMenuFragment firstFragment = new PizzaMenuFragment();
-
       // Add Fragment to FrameLayout (flContainer), using FragmentManager
-      FragmentTransaction ft = getSupportFragmentManager().beginTransaction();// begin  FragmentTransaction
       ft.add(R.id.flContainer, firstFragment);                                // add    Fragment
+      ft.commit();                                                            // commit FragmentTransaction
+    } else {
+      // if this is not done, the menu fragment ended up duplicate
+      //  on rotate back to landscape, only when the menu activity was
+      //  last active
+      ft.replace(R.id.flContainer, firstFragment);                                // add    Fragment
       ft.commit();                                                            // commit FragmentTransaction
     }
 
