@@ -5,7 +5,7 @@
               android:layout_height="match_parent"
               android:layout_marginRight="5dp"
               android:layout_marginEnd="5dp">
-
+<!--
     <FrameLayout
         android:id="@+id/flContainer"
         android:layout_weight="1"
@@ -19,7 +19,8 @@
         android:layout_marginLeft="10dp"
         android:layout_marginStart="10dp"
         android:layout_height="match_parent"/>
-    <!--<fragment android:name="com.codepath.mypizza.fragments.PizzaMenuFragment"
+    -->
+    <fragment android:name="com.codepath.mypizza.fragments.PizzaMenuFragment"
               android:id="@+id/pizza_menu_fragment"
               android:layout_weight="1"
               android:layout_width="0dp"
@@ -31,6 +32,6 @@
               android:layout_width="0dp"
               android:layout_marginLeft="10dp"
               android:layout_marginStart="10dp"
-              android:layout_height="match_parent" />-->
+              android:layout_height="match_parent" />
 
 </LinearLayout>

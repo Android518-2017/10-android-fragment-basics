@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity  implements PizzaMenuFragmen
 
     Log.d("DEBUG", getResources().getConfiguration().orientation + "");
 
+    /*
     if (savedInstanceState == null) {
       // Instance of first fragment
       // Add Fragment to FrameLayout (flContainer), using FragmentManager
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity  implements PizzaMenuFragmen
       ft2.add(R.id.flContainer2, secondFragment);                               // add    Fragment
       ft2.commit();                                                            // commit FragmentTransaction
     }
+    */
   }
 
   @Override
@@ -58,7 +60,7 @@ public class MainActivity extends AppCompatActivity  implements PizzaMenuFragmen
     args.putInt("position", position);
     secondFragment.setArguments(args);          // (1) Communicate with Fragment using Bundle
 
-
+/*
     if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
       getSupportFragmentManager()
           .beginTransaction()
@@ -72,5 +74,6 @@ public class MainActivity extends AppCompatActivity  implements PizzaMenuFragmen
           .addToBackStack(null)
           .commit();
     }
+ */
   }
 }
